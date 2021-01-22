@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "RegisterOk";
+}
+
+<link href="~/Content/vendor/bootstrap/css/login-register.css" rel="stylesheet" />
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+@using (Html.BeginForm())
+{
+    <div class="login-box">
+        <div class="login-header">Yönlendiriliyorsunuz...</div>
+        <div class="login-body">
+
+
+            <form class="form-group">
+                <div class="main-content">
+                    <div class="text-success">
+                        <h2><i class="fas fa-check"></i>&nbsp;&nbsp; Kayıt İşlemiz başarılı :)</h2>
+                        <hr />
+                        <p class="text-justify">
+                            Lütfen e-posta adresinize gönderdiğimiz aktivasyon linkine tıklayarak hesabınızı aktive ediniz.
+                        </p>
+                        <p class="text-justify">
+                            Hesabınızı aktive etmeden  not ekleyemez ve beğenme işlemi yapamazsınız.
+                        </p>
+
+                    </div>
+                  
+                </div>
+            </form>
+        </div>
+    </div>
+
+}
+
+<script>
+    $(function () {
+
+        $("footer").hide();
+    });
+
+    setTimeout(function () {
+        window.location=("/Home/Index")
+    },3000)
+
+
+</script>

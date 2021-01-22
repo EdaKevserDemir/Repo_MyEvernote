@@ -1,0 +1,85 @@
+﻿@using MyEvernote.ViewModals
+@model RegisterViewModal
+@{
+    ViewBag.Title = "Myevernote Kayıt Sayfası";
+}
+<link href="~/Content/vendor/bootstrap/css/login-register.css" rel="stylesheet" />
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<style type="text/css">
+    .validation-summary-errors {
+        border: 2px dotted #0094ff;
+        background-color: cornflowerblue;
+        border-radius: 8px;
+        border-radius: 8px;
+        margin-bottom: 2%;
+        font-size: 12px;
+        
+       
+    }
+
+        .validation-summary-errors ul {
+            list-style-type: none;
+            padding: 10px;
+            color: azure;
+        }
+
+ 
+</style>
+
+<!------ Include the above in your HEAD tag ---------->
+@using (Html.BeginForm())
+{
+    <div class="login-box">
+        <div class="login-header">Kayıt Formu</div>
+        <div class="login-body">
+
+
+            <form class="form-group">
+                <div class="main-content">
+
+                    @Html.ValidationSummary(false)
+
+                    <div class="input-group">
+                        <i class="far fa-user" style="margin-top:2%; margin-left:2%"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                        @Html.TextBoxFor(model => model.Username, new { @class = "form-control", placeholder = "Kullanıcı adınızı giriniz.", })
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <i class="far fa-envelope" style="margin-top:2%;margin-left:2%"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                        @Html.TextBoxFor(model => model.Email, new { @class = "form-control", placeholder = "E-mail adresinizi giriniz.", })
+                    </div>
+
+                    <br />
+                    <div class="input-group">
+                        <i class="fas fa-lock" style="margin-top:2%;margin-left:2%"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                        @Html.TextBoxFor(model => model.Password, new { @class = "form-control", placeholder = "Şifre giriniz.", type = "password" })
+
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <i class="fas fa-lock" style="margin-top:2%;margin-left:2%"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                        @Html.TextBoxFor(model => model.RePassword, new { @class = "form-control", placeholder = "Şifreyi tekrar giriniz.", type = "password" })
+
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <button type="submit" value="Giriş" class="form-control btn btn-success " name="">Kayıt Ol</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+}
+
+<script>
+    $(function () {
+
+        $("footer").hide();
+    });
+
+
+</script>

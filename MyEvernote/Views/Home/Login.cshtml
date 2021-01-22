@@ -1,0 +1,50 @@
+﻿@using MyEvernote.ViewModals
+@model LoginViewModal
+@{
+    ViewBag.Title = "Myevernote Giriş Sayfası";
+}
+<link href="~/Content/vendor/bootstrap/css/login-register.css" rel="stylesheet" />
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+@using (Html.BeginForm())
+{
+    <div class="login-box">
+        <div class="login-header">Giriş Formu</div>
+        <div class="login-body">
+
+
+            <form class="form-group">
+                <div class="main-content">
+
+                    <div class="input-group">
+
+                        <i class="far fa-envelope"style="margin-top:2%; margin-left:2%" ></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                        @Html.TextBoxFor(model => model.Username, new { @class = "form-control", placeholder = "Kullanıcı adınızı giriniz.", })
+                    </div>
+                    <br />
+                  
+                    <div class="input-group">
+                        <i class="fas fa-lock" style="margin-top:2%; margin-left:2%"></i> &nbsp;&nbsp;&nbsp;&nbsp;
+                        @Html.TextBoxFor(model => model.Password, new { @class = "form-control", placeholder = "Şifrenizi giriniz.", type = "password" })
+                    </div>
+                    <hr />
+
+                    <button type="submit" value="Giriş" class="form-control btn btn-success " name="">Giriş</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+}
+
+<script>
+    $(function () {
+
+        $("footer").hide();
+    });
+
+
+</script>

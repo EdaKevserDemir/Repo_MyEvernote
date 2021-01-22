@@ -1,0 +1,32 @@
+﻿.login-box {
+    height: 50%;
+    width: 30%;
+    border: 1px solid grey;
+    margin-left: 35%;
+    margin-top: 5%;
+    position: relative;
+    box-shadow: 21px 12px 24px 10px rgba(0, 0, 0, .5);
+    background: #dadada;
+    margin-bottom: 5%;
+    border-radius:10px;
+   
+}
+
+.login-header {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif,cursive;
+    font-size: 24px;
+    background: linear-gradient(to bottom, #00bfff 0%, #0000ff 100%);
+    color: #fff;
+    position: relative;
+    box-shadow: 1px 3px 14px rgba(0, 0, 0, .5);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.login-body {
+
+    padding: 10px;
+    line-height: 2;
+    margin-top: 5%;
+    margin-bottom:10%;
+}
